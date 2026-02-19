@@ -9,16 +9,33 @@
 
 # Homebrew formulae (CLI tools)
 typeset -a FORMULAE=(
+    ansible
+    btop
+    cronboard
+    dust
+    dysk
+    gemini-cli
     git
     gh
     jq
-    tmux
-    pass
     mas
+    node
+    pass
+    pgcli
+    pyenv
+    rustup
+    sd
+    superfile
+    tealdeer
+    tmux
 )
 
 # Homebrew casks (GUI applications)
 typeset -a CASKS=(
-    zed
+    appcleaner
+    claude
+    claude-code
+    handy
     wezterm
+    zed
 )

@@ -30,10 +30,11 @@ source "$SCRIPT_DIR/scripts/packages.zsh"
 source "$SCRIPT_DIR/scripts/fonts.zsh"
 source "$SCRIPT_DIR/scripts/dotfiles.zsh"
 source "$SCRIPT_DIR/scripts/paths.zsh"
+source "$SCRIPT_DIR/scripts/secrets.zsh"
 source "$SCRIPT_DIR/scripts/system.zsh"
 
 # --- Component registry ---
-typeset -a COMPONENTS=(xcode homebrew apps packages fonts dotfiles paths system)
+typeset -a COMPONENTS=(xcode homebrew apps packages fonts dotfiles paths secrets system)
 
 typeset -A LABELS=(
     [xcode]="Xcode CLI Tools"
@@ -43,6 +44,7 @@ typeset -A LABELS=(
     [fonts]="Fonts"
     [dotfiles]="Dotfiles"
     [paths]="Paths"
+    [secrets]="Secrets"
     [system]="System Settings"
 )
 
@@ -54,6 +56,7 @@ typeset -A INSTALLERS=(
     [fonts]=install_fonts
     [dotfiles]=install_dotfiles
     [paths]=install_paths
+    [secrets]=install_secrets
     [system]=install_system
 )
 
