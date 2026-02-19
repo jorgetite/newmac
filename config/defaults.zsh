@@ -7,53 +7,61 @@
 #   Supported types: string, int, float, bool
 #
 #   Add, remove, or modify entries to customize system settings.
-#   Reference: defaults.json contains a full dump for discovering keys.
+#   These values were derived by comparing settings.json (current system)
+#   against defaults.json (factory defaults).
 ###############################################################################
 
 typeset -a DEFAULTS=(
     # --- Global / General ---
     "NSGlobalDomain|AppleInterfaceStyle|string|Dark"
+    "NSGlobalDomain|AppleInterfaceStyleSwitchesAutomatically|bool|false"
     "NSGlobalDomain|AppleICUForce24HourTime|bool|true"
+    "NSGlobalDomain|AppleICUForce12HourTime|bool|false"
     "NSGlobalDomain|AppleShowAllExtensions|bool|true"
-    "NSGlobalDomain|AppleMiniaturizeOnDoubleClick|bool|false"
     "NSGlobalDomain|NSTableViewDefaultSizeMode|int|3"
+    "NSGlobalDomain|com.apple.sound.beep.sound|string|/System/Library/Sounds/Funk.aiff"
 
     # --- Keyboard ---
-    "NSGlobalDomain|KeyRepeat|int|2"
-    "NSGlobalDomain|InitialKeyRepeat|int|15"
     "NSGlobalDomain|AppleKeyboardUIMode|int|2"
-    "NSGlobalDomain|NSAutomaticCapitalizationEnabled|bool|false"
-    "NSGlobalDomain|NSAutomaticPeriodSubstitutionEnabled|bool|false"
+    "NSGlobalDomain|NSAutomaticCapitalizationEnabled|bool|true"
+    "NSGlobalDomain|NSAutomaticPeriodSubstitutionEnabled|bool|true"
 
     # --- Trackpad ---
     "NSGlobalDomain|com.apple.trackpad.scaling|float|1.0"
-    "NSGlobalDomain|com.apple.trackpad.forceClick|bool|true"
     "com.apple.AppleMultitouchTrackpad|Clicking|bool|true"
     "com.apple.AppleMultitouchTrackpad|TrackpadThreeFingerDrag|bool|true"
-    "com.apple.AppleMultitouchTrackpad|TrackpadRightClick|bool|true"
+    "com.apple.AppleMultitouchTrackpad|TrackpadThreeFingerHorizSwipeGesture|int|0"
+    "com.apple.AppleMultitouchTrackpad|TrackpadThreeFingerVertSwipeGesture|int|0"
 
     # --- Dock ---
     "com.apple.dock|tilesize|int|48"
-    "com.apple.dock|orientation|string|bottom"
-    "com.apple.dock|autohide|bool|true"
+    "com.apple.dock|orientation|string|left"
     "com.apple.dock|minimize-to-application|bool|true"
-    "com.apple.dock|show-recents|bool|false"
-    "com.apple.dock|launchanim|bool|false"
+    "com.apple.dock|showAppExposeGestureEnabled|bool|true"
+    "com.apple.dock|showMissionControlGestureEnabled|bool|true"
 
     # --- Finder ---
-    "com.apple.finder|AppleShowAllFiles|bool|true"
-    "com.apple.finder|ShowPathbar|bool|true"
-    "com.apple.finder|ShowStatusBar|bool|true"
+    "com.apple.finder|ShowHardDrivesOnDesktop|bool|true"
+    "com.apple.finder|ShowMountedServersOnDesktop|bool|true"
+    "com.apple.finder|ShowRecentTags|bool|false"
+    "com.apple.finder|ShowPreviewPane|bool|false"
     "com.apple.finder|_FXSortFoldersFirst|bool|true"
-    "com.apple.finder|FXDefaultSearchScope|string|SCcf"
-    "com.apple.finder|FXEnableExtensionChangeWarning|bool|false"
+    "com.apple.finder|_FXSortFoldersFirstOnDesktop|bool|true"
+    "com.apple.finder|FXPreferredViewStyle|string|icnv"
+    "com.apple.finder|FXRemoveOldTrashItems|bool|true"
+    "com.apple.finder|NewWindowTarget|string|PfVo"
+    "com.apple.finder|NewWindowTargetPath|string|file:///"
+    "com.apple.finder|FXICloudDriveEnabled|bool|true"
+    "com.apple.finder|FXICloudDriveDesktop|bool|true"
+    "com.apple.finder|FXICloudDriveDocuments|bool|true"
 
-    # --- Screen Capture ---
-    "com.apple.screencapture|type|string|png"
-    "com.apple.screencapture|disable-shadow|bool|true"
+    # --- Menu Bar Clock ---
+    "com.apple.menuextra.clock|ShowAMPM|bool|false"
 
-    # --- Accessibility ---
-    "com.apple.Accessibility|KeyRepeatDelay|float|0.5"
-    "com.apple.Accessibility|KeyRepeatInterval|float|0.083333333"
-    "com.apple.Accessibility|KeyRepeatEnabled|bool|true"
+    # --- Window Manager ---
+    "com.apple.WindowManager|AppWindowGroupingBehavior|bool|true"
+    "com.apple.WindowManager|EnableTiledWindowMargins|bool|false"
+    "com.apple.WindowManager|HideDesktop|bool|true"
+    "com.apple.WindowManager|StageManagerHideWidgets|bool|false"
+    "com.apple.WindowManager|StandardHideWidgets|bool|false"
 )

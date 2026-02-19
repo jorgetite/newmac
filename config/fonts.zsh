@@ -14,7 +14,10 @@ typeset -a FONT_CASKS=(
     font-fira-code-nerd-font
     font-jetbrains-mono
     font-jetbrains-mono-nerd-font
-    font-inter
-    font-sf-mono
-    font-sf-pro
+    font-0xproto
+    font-0xproto-nerd-font
+    font-source-code-pro
+    font-reddit-mono
+    font-sora
+    font-teko
 )

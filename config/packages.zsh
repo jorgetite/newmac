@@ -11,32 +11,14 @@
 typeset -a FORMULAE=(
     git
     gh
-    wget
-    curl
-    tree
     jq
-    ripgrep
-    fzf
-    bat
-    eza
-    zoxide
     tmux
-    neovim
-    node
-    python
-    go
+    pass
+    mas
 )
 
 # Homebrew casks (GUI applications)
 typeset -a CASKS=(
-    visual-studio-code
-    firefox
-    iterm2
-    rectangle
-    raycast
-    1password
-    docker
-    slack
-    spotify
-    notion
+    zed
+    wezterm
 )

@@ -10,6 +10,7 @@
 #
 # DEPENDENCIES (Core):
 #   - Internet connection
+#   - Sign-In into App Store
 #
 # USAGE:
 #   ./install.zsh
@@ -24,30 +25,36 @@ source "$SCRIPT_DIR/scripts/helpers.zsh"
 # --- Load installation functions ---
 source "$SCRIPT_DIR/scripts/xcode.zsh"
 source "$SCRIPT_DIR/scripts/homebrew.zsh"
+source "$SCRIPT_DIR/scripts/apps.zsh"
 source "$SCRIPT_DIR/scripts/packages.zsh"
-source "$SCRIPT_DIR/scripts/system.zsh"
 source "$SCRIPT_DIR/scripts/fonts.zsh"
 source "$SCRIPT_DIR/scripts/dotfiles.zsh"
+source "$SCRIPT_DIR/scripts/paths.zsh"
+source "$SCRIPT_DIR/scripts/system.zsh"
 
 # --- Component registry ---
-typeset -a COMPONENTS=(xcode homebrew packages system fonts dotfiles)
+typeset -a COMPONENTS=(xcode homebrew apps packages fonts dotfiles paths system)
 
 typeset -A LABELS=(
     [xcode]="Xcode CLI Tools"
     [homebrew]="Homebrew"
     [packages]="Homebrew Packages"
-    [system]="System Settings"
+    [apps]="MacOS Apps"
     [fonts]="Fonts"
     [dotfiles]="Dotfiles"
+    [paths]="Paths"
+    [system]="System Settings"
 )
 
 typeset -A INSTALLERS=(
     [xcode]=install_xcode
     [homebrew]=install_homebrew
     [packages]=install_packages
-    [system]=install_system
+    [apps]=install_apps
     [fonts]=install_fonts
     [dotfiles]=install_dotfiles
+    [paths]=install_paths
+    [system]=install_system
 )
 
 # Track which components are selected and their results
